@@ -1,0 +1,16 @@
+:root {
+  --vp-c-brand-1: #0d9488;
+  --vp-c-brand-2: #14b8a6;
+  --vp-c-brand-3: #0f766e;
+  --vp-c-brand-soft: rgba(13, 148, 136, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #0d9488, #0284c7);
+}
+.dark {
+  --vp-c-brand-1: #2dd4bf;
+  --vp-c-brand-2: #14b8a6;
+  --vp-c-brand-3: #0d9488;
+}
+.VPFeature { border: 1px solid var(--vp-c-divider); background: transparent; }
+.custom-block, .vp-doc table { border-radius: 8px; }
+.vp-doc h2 { border-top: none; margin-top: 56px; }
