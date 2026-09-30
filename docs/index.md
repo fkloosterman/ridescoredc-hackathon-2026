@@ -3,7 +3,15 @@ layout: home
 hero:
   name: RideScore DC
   text: Hackathon 2026
-  tagline: "Sat Oct 3 · GW Science & Engineering Hall · How safe and comfortable is it to bike on every street in DC?"
+  tagline: >-
+    How safe and comfortable is it to bike on every street in DC?
+    <ul class="event-list">
+    <li><strong>When</strong><span>Sat Oct 3 · doors 9:30 AM · kickoff 10:30 AM · building from 11:00 AM</span></li>
+    <li><strong>Where</strong><span>GW Science &amp; Engineering Hall, 800 22nd St NW</span></li>
+    <li><strong>Arrival</strong><span>Enter at 22nd &amp; H St. Volunteers will meet you and provide building access.</span></li>
+    <li><strong>Included</strong><span>Lunch and coffee</span></li>
+    <li><strong>Bring</strong><span>Laptop, phone, pen or pencil, and a clipboard if you have one</span></li>
+    </ul>
   actions:
     - theme: brand
       text: Choose your track
