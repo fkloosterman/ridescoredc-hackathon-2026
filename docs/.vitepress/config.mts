@@ -10,8 +10,28 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      {
+        text: 'Tracks',
+        items: [
+          { text: 'Website / UI', link: '/tracks/website-ui' },
+          { text: 'Bike Safety Models', link: '/tracks/models' },
+          { text: 'Community Research', link: '/tracks/community-research' }
+        ]
+      },
       { text: 'RideScore DC', link: 'https://ridescoredc.com' }
     ],
+    sidebar: {
+      '/tracks/': [
+        {
+          text: 'Choose your track',
+          items: [
+            { text: 'Website / UI', link: '/tracks/website-ui' },
+            { text: 'Bike Safety Models', link: '/tracks/models' },
+            { text: 'Community Research', link: '/tracks/community-research' }
+          ]
+        }
+      ]
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/fkloosterman/ridescoredc-hackathon-2026' }
     ],
