@@ -3,37 +3,43 @@ layout: home
 hero:
   name: RideScore DC
   text: Hackathon 2026
-  tagline: How safe and comfortable is it to bike on every street in Washington, DC? Join us on Sat Oct 3 and help find out.
+  tagline: "Sat Oct 3 · GW Science & Engineering Hall · How safe and comfortable is it to bike on every street in DC?"
   actions:
     - theme: brand
-      text: Get set up
-      link: '#before-you-come'
+      text: Choose your track
+      link: '#choose-your-track'
     - theme: alt
-      text: See the schedule
+      text: Schedule
       link: '#schedule'
 features:
   - icon: 🗺️
     title: Website / UI
     details: Improve the map and route survey riders use every day. Web developers and designers welcome.
+    link: /tracks/website-ui
+    linkText: Track details
   - icon: 📊
     title: Bike Safety Models
     details: Build any bicycle-safety model or analysis on top of OSM + DC Open Data. Every experience level.
+    link: /tracks/models
+    linkText: Track details
   - icon: 🧑‍🤝‍🧑
     title: Community Research
     details: Who is RideScore for, and can they trust it? No coding or bike-safety expertise needed.
+    link: /tracks/community-research
+    linkText: Track details
 ---
 
 <div class="landing">
 
-## The essentials
+## Before you come
 
-|   |   |
+If you do one thing before Saturday, get set up for your track. Downloading large files on shared event Wi-Fi is slow, so preparing ahead lets you start building promptly at 11:00 AM.
+
+| Track | Before you come |
 |---|---|
-| **When** | Saturday, October 3 · doors 9:30 AM, kickoff 10:30 AM, building starts 11:00 AM |
-| **Where** | GW Science & Engineering Hall, 800 22nd St NW |
-| **Arrival** | Enter at 22nd & H St. Volunteers will meet you and provide building access. |
-| **Included** | Lunch and coffee |
-| **Bring** | Laptop, phone, pen or pencil, and a clipboard if you have one |
+| [**Website / UI**](/tracks/website-ui) | Clone the website repo and follow the Front-End (lighter) or Full Stack (needs Docker) developer guide. Windows users: start with the WSL tab. |
+| [**Bike Safety Models**](/tracks/models) | Get the data ahead of time: download the snapshot from Hugging Face (easiest), run the basemap notebook once, or run the scoring pipeline once (includes scores and crash data). Tools: Python, uv and Jupyter. |
+| [**Community Research**](/tracks/community-research) | No software installation required. |
 
 ## About RideScore DC
 
@@ -63,30 +69,6 @@ Two projects share the day: RideScore DC and a separate FEC Data project. This s
 | 4:15 | Demos |
 | 5:15 | Wrap-up and group photo |
 | 5:30 | Happy hour |
-
-## Tracks
-
-### Track 1 · Website / UI
-
-Design and build new features for the RideScore DC interface, using a ready-to-go HTML/Docker environment with a MapLibre frontend and a PostGIS/Martin tile backend. Open problems include letting users submit their own street safety observations, flagging hazards or leaving feedback on a segment, improving mobile responsiveness, and rethinking how the map communicates safety at a glance.
-
-### Track 2 · Bike Safety Models
-
-RideScore DC scores streets with a modified Level of Traffic Stress (LTS) model and a Bicycle Network Analysis (BNA) model, with CycleRAP parameters also mapped. This track is open-ended: build any bicycle-safety model you like, with a completed data pipeline and dataset ready to use. Ideas include new or hybrid scoring approaches, models weighting specific risk factors, crash-risk prediction, or analyses that surface patterns existing models miss.
-
-### Track 3 · Community Research
-
-Who is RideScore for: cyclists, scooter riders, policy makers, advocacy groups? This track explores who we think the map is built for and what we need to ask users to learn whether they can trust it and use it to make decisions. You don't need to code or be a bike-safety expert; your fresh perspective is what matters.
-
-## Before you come
-
-If you do one thing before Saturday, get set up for your track. Downloading large files on shared event Wi-Fi is slow, so preparing ahead lets you start building promptly at 11:00 AM.
-
-| Track | Before you come |
-|---|---|
-| **Models** | Get the data ahead of time: download the snapshot from Hugging Face (easiest), run the basemap notebook once, or run the scoring pipeline once (includes scores and crash data). Tools: Python, uv and Jupyter. |
-| **Website / UI** | Clone the website repo and follow the Front-End (lighter) or Full Stack (needs Docker) developer guide. Windows users: start with the WSL tab. |
-| **Community Research** | No software installation required. |
 
 ## Links
 
