@@ -3,7 +3,15 @@ layout: home
 hero:
   name: RideScore DC
   text: Hackathon 2026
-  tagline: "Sat Oct 3 · GW Science & Engineering Hall · How safe and comfortable is it to bike on every street in DC?"
+  tagline: >-
+    How safe and comfortable is it to bike on every street in DC?
+    <ul class="event-list">
+    <li><strong>When</strong><span>Sat Oct 3 · doors 9:30 AM · kickoff 10:30 AM · building from 11:00 AM</span></li>
+    <li><strong>Where</strong><span>GW Science &amp; Engineering Hall, 800 22nd St NW</span></li>
+    <li><strong>Arrival</strong><span>Enter at 22nd &amp; H St. Volunteers will meet you and provide building access.</span></li>
+    <li><strong>Included</strong><span>Lunch and coffee</span></li>
+    <li><strong>Bring</strong><span>Laptop, phone, pen or pencil, and a clipboard if you have one</span></li>
+    </ul>
   actions:
     - theme: brand
       text: Choose your track
@@ -31,16 +39,6 @@ features:
 
 <div class="landing">
 
-## Before you come
-
-If you do one thing before Saturday, get set up for your track. Downloading large files on shared event Wi-Fi is slow, so preparing ahead lets you start building promptly at 11:00 AM.
-
-| Track | Before you come |
-|---|---|
-| [**Website / UI**](/tracks/website-ui) | Clone the website repo and follow the Front-End (lighter) or Full Stack (needs Docker) developer guide. Windows users: start with the WSL tab. |
-| [**Bike Safety Models**](/tracks/models) | Get the data ahead of time: download the snapshot from Hugging Face (easiest), run the basemap notebook once, or run the scoring pipeline once (includes scores and crash data). Tools: Python, uv and Jupyter. |
-| [**Community Research**](/tracks/community-research) | No software installation required. |
-
 ## About RideScore DC
 
 RideScore DC is an open-source project from [Civic Tech DC](https://www.civictechdc.org), built by a team of 10–15 people. It combines public data about DC's streets from Open Data DC and OpenStreetMap (bike lanes, speed limits, number of lanes, traffic and crashes) into a stress and safety score for every street segment. [Explore the map at ridescoredc.com.](https://ridescoredc.com)
@@ -54,6 +52,16 @@ This is a collaborative hackathon, more about moving RideScore DC forward than f
 ::: info
 Two projects share the day: RideScore DC and a separate FEC Data project. This site covers RideScore DC.
 :::
+
+## Before you come
+
+If you do one thing before Saturday, get set up for your track. Downloading large files on shared event Wi-Fi is slow, so preparing ahead lets you start building promptly at 11:00 AM.
+
+| Track | Before you come |
+|---|---|
+| [**Website / UI**](/tracks/website-ui) | Clone the website repo and follow the Front-End (lighter) or Full Stack (needs Docker) developer guide. Windows users: start with the WSL tab. |
+| [**Bike Safety Models**](/tracks/models) | Get the data ahead of time: download the snapshot from Hugging Face (easiest), run the basemap notebook once, or run the scoring pipeline once (includes scores and crash data). Tools: Python, uv and Jupyter. |
+| [**Community Research**](/tracks/community-research) | No software installation required. |
 
 ## Schedule
 
