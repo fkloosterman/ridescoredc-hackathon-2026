@@ -7,7 +7,7 @@ RideScore DC publishes two artifacts:
 
 `npm run data` downloads both and loads them into your local database; the [Full Stack Developer Guide](/tracks/website-ui/full-stack-guide) covers the loading commands.
 
-The data set currently shown on the website comes from public Open Data DC: the roadway block network, crash records, and the Washington DC boundary.
+The data set currently shown on the website comes from public Open Data DC: the [roadway block](https://opendata.dc.gov/datasets/DCGIS::roadway-block/about) network, [crash records](https://opendata.dc.gov/datasets/crashes-in-dc/about), and the Washington DC boundary.
 
 ## The three datasets
 

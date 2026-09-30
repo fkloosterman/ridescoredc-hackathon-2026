@@ -147,7 +147,7 @@ docker compose exec db psql -U postgres -d db -c "\d app.survey_submissions"
 
 This change crosses both repositories and cannot be tested against the shared server.
 
-A crash popup on the map page can only show what the map tile carries, and the tile carries only what is defined in the `serving` schema. The file `serving/040_crashes.sql` in ridescoredc-models lists the columns of the crashes table that are exposed in `serving`. For example, `unknown_injuries_bicyclist` and `bicyclists_impaired` exist in `data.crashes` but are left out of the view on purpose.
+A bike crash popup on the map page can only show what the map tile carries, and the tile carries only what is defined in the `serving` schema of the database. The file `serving/040_crashes.sql` in ridescoredc-models lists the columns of the crashed table that are exposed in the `serving` schema. For example, the columns `unknown_injuries_bicyclist` and `bicyclists_impaired` exist in the `data.crashes` table, but are left out of the view on purpose. If you would like to add either one, change the `serving/040_crashes.sql` file.
 
 1. Clone the [ridescoredc-models](https://github.com/civictechdc/ridescoredc-models) repository.
 2. Add the column to the `SELECT` in `serving/040_crashes.sql`.

@@ -2,6 +2,10 @@
 
 How to set up a Linux development environment inside Windows. The Windows Subsystem for Linux (WSL) gives you a full Linux environment directly inside Windows, which makes every command in the developer guides the same as on macOS and Linux.
 
+::: tip Placeholders
+In the code blocks, text shown <span class="placeholder">in red</span> is a placeholder: replace it with your own value.
+:::
+
 ## Step 1: Install WSL 2 (Ubuntu)
 
 1. Open PowerShell or Command Prompt as Administrator (right-click and select **Run as administrator**).
@@ -17,7 +21,7 @@ How to set up a Linux development environment inside Windows. The Windows Subsys
 5. Enter a username and password for your Linux environment when prompted:
 
    ```text
-   Enter new UNIX username: your_username
+   Enter new UNIX username: <<your_username>>
    New password:
    Retype new password:
    ```
@@ -42,8 +46,8 @@ git --version
 Configure your Git identity, replacing the name and email with your own:
 
 ```sh
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
+git config --global user.name "<<Your Name>>"
+git config --global user.email "<<your.email@example.com>>"
 ```
 
 ## Step 4: Accessing files between Windows and Linux
@@ -59,7 +63,7 @@ explorer.exe .
 **Windows files from Linux.** Your Windows drives are mounted under `/mnt/`. For example, for the C: drive:
 
 ```sh
-cd /mnt/c/Users/YourWindowsUsername/
+cd /mnt/c/Users/<<YourWindowsUsername>>/
 ```
 
 ::: tip Best practice
@@ -68,7 +72,7 @@ Keep your project source code inside the Linux filesystem (for example `/home/us
 
 ## Step 5: Set up Visual Studio Code for WSL
 
-1. Download and install VS Code on Windows (not inside Linux).
+1. Download and install [VS Code](https://code.visualstudio.com/) on Windows (not inside Linux).
 2. Open VS Code, go to the Extensions tab (Ctrl+Shift+X), search for **WSL**, and install the extension by Microsoft.
 3. In your Linux terminal, navigate to a project directory and launch VS Code:
 
@@ -81,7 +85,7 @@ Keep your project source code inside the Linux filesystem (for example `/home/us
 
 Only needed for the [Full Stack guide](/tracks/website-ui/full-stack-guide).
 
-1. Download and install Docker Desktop for Windows.
+1. Download and install [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/).
 2. During installation, check **Use WSL 2 instead of Hyper-V**.
 3. Launch Docker Desktop after installation.
 4. Open Docker Desktop **Settings > Resources > WSL Integration**.
