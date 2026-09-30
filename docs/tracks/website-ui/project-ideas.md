@@ -2,8 +2,6 @@
 
 Seven mini-projects for the Website / UI track. You don't need to finish every stretch goal: pick one or two improvements, and a small working change counts as success.
 
-Resources for all of them: the [RideScore DC development site](https://dev.ridescoredc.com) and the [website repository](https://github.com/civictechdc/ridescoredc-website).
-
 ## 1. Give RideScore DC a front door
 
 **Level:** Beginner
@@ -13,6 +11,10 @@ Resources for all of them: the [RideScore DC development site](https://dev.rides
 **The challenge.** Create a landing page that introduces RideScore DC and provides clear navigation to the map and route survey. It should briefly explain what RideScore DC does, what the safety scores mean, and how visitors can explore the map or contribute their own experience.
 
 **What you'll learn.** Web UI development, page layout, accessibility, and communicating a technical project to a general audience.
+
+**Resources**
+- [RideScore DC development site](https://dev.ridescoredc.com/)
+- [Website repository](https://github.com/civictechdc/ridescoredc-website)
 
 **Stretch goals**
 - Add simple visual explanations or illustrations.
@@ -28,6 +30,10 @@ Resources for all of them: the [RideScore DC development site](https://dev.rides
 **The challenge.** Create an interactive in-app tutorial that introduces the most important features. For example, it could show users how to explore the map, inspect a street segment, understand the safety-score visualization, and submit route feedback.
 
 **What you'll learn.** Interactive web UI, user experience design, and working with an existing application.
+
+**Resources**
+- [RideScore DC development site](https://dev.ridescoredc.com/)
+- [Website repository](https://github.com/civictechdc/ridescoredc-website)
 
 **Stretch goals**
 - Remember whether the user has completed the tutorial.
@@ -45,7 +51,11 @@ Resources for all of them: the [RideScore DC development site](https://dev.rides
 
 **What you'll learn.** Technical communication, data interpretation, and translating domain-specific methodology into accessible explanations.
 
-**Extra resources.** Montgomery Planning LTS methodology; PeopleForBikes City Ratings methodology.
+**Resources**
+- [Montgomery Planning LTS methodology](https://montgomeryplanning.org/wp-content/uploads/2017/11/Appendix-D.pdf)
+- [PeopleForBikes City Ratings methodology](https://cityratings.peopleforbikes.org/about/methodology)
+- [RideScore DC development site](https://dev.ridescoredc.com/)
+- [Website repository](https://github.com/civictechdc/ridescoredc-website)
 
 **Stretch goals**
 - Add interactive examples.
@@ -61,6 +71,10 @@ Resources for all of them: the [RideScore DC development site](https://dev.rides
 **The challenge.** Improve the visualization of safety scores and the information shown for individual street segments. Possible areas include the map colors and legend, different zoom levels, popup information, or the presentation of the factors contributing to a score. Choose one or two improvements.
 
 **What you'll learn.** MapLibre/web mapping, data visualization, UI design, and working with geospatial data in a browser.
+
+**Resources**
+- [RideScore DC development site](https://dev.ridescoredc.com/)
+- [Website repository](https://github.com/civictechdc/ridescoredc-website)
 
 **Stretch goals**
 - Show a breakdown of the factors contributing to a score.
@@ -85,6 +99,10 @@ Start with a small number of useful statistics rather than trying to build a com
 
 **What you'll learn.** Data visualization, exploratory data analysis, and presenting geospatial data to non-technical users.
 
+**Resources**
+- [RideScore DC development site](https://dev.ridescoredc.com/)
+- [Website repository](https://github.com/civictechdc/ridescoredc-website)
+
 **Stretch goals**
 - Make statistics respond to changes in scoring parameters.
 - Compare different areas of DC.
@@ -107,6 +125,10 @@ Start with a small number of useful statistics rather than trying to build a com
 
 **What you'll learn.** Interactive maps, routing, geospatial user interfaces, and designing for real-world users.
 
+**Resources**
+- [RideScore DC survey](https://dev.ridescoredc.com/survey/)
+- [Website repository](https://github.com/civictechdc/ridescoredc-website)
+
 **Stretch goals**
 - Show the computed RideScore while a route is being created.
 - Compare the reported route with the modeled score.
@@ -116,12 +138,15 @@ Start with a small number of useful statistics rather than trying to build a com
 
 **Level:** Advanced
 
-**Background.** The current map uses Martin to serve vector tiles from the database. An important feature of the current system is that safety scores can be calculated dynamically using user-defined weights. [PMTiles](https://docs.protomaps.com/pmtiles/) provides another way to distribute vector tiles as static files. It could simplify tile serving or improve performance, but introduces different tradeoffs.
+**Background.** The current map uses Martin to serve vector tiles from the database. An important feature of the current system is that safety scores can be calculated dynamically using user-defined weights. PMTiles provides another way to distribute vector tiles as static files. It could simplify tile serving or improve performance, but introduces different tradeoffs.
 
 **The challenge.** Build a small PMTiles proof of concept and compare it with the current Martin-based approach. Start with static safety-score tiles. The goal is to determine whether PMTiles provides a useful alternative and whether it changes the user experience.
 
 **What you'll learn.** Vector tiles, MapLibre, web mapping infrastructure, and performance tradeoffs.
 
-**Extra resources.** [PMTiles](https://docs.protomaps.com/pmtiles/); [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/).
+**Resources**
+- [Website repository](https://github.com/civictechdc/ridescoredc-website)
+- [PMTiles](https://github.com/protomaps/PMTiles)
+- [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/)
 
 **Stretch goal.** Explore whether dynamic safety scores can also be supported with PMTiles, potentially by storing the score components in the tiles and calculating the final score in MapLibre on the client.

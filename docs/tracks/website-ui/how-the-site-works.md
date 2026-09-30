@@ -80,7 +80,7 @@ Every road segment has two identifiers:
 
 The HTML, CSS and JavaScript files in `frontend/` are the files nginx serves. There is no bundler output, no `dist/`, no compile step. Editing `frontend/index.html` and reloading the browser is the basic front-end workflow.
 
-Vite is used only for convenience while developing. `npm run dev` starts a local Vite server that serves the same files out of `frontend/` and forwards `/tiles` and `/api` to an upstream server: the shared dev server by default, or your own stack if you set `VITE_UPSTREAM`. Vite is never deployed, and `vite.config.js` is not read by anything in production.
+Vite is used only for convenience while developing. `npm run dev` starts a local Vite server that serves the same files out of `frontend/` and forwards `/tiles` and `/api` to an upstream server: the shared dev server by default, or your own stack if you set `VITE_UPSTREAM`. Vite is never deployed, and `vite.config.js` is not read by anything in production. The deploy script (`scripts/gitlab-ci/deployment.sh`) does a `git pull --ff-only`, applies the `app` migrations, and restarts Martin and the API. Nothing is built.
 
 One consequence: because the pages attach buttons with `onclick` attributes, the shared scripts are plain `<script>` tags defining globals rather than ES modules. Converting to modules means converting every `onclick` first.
 

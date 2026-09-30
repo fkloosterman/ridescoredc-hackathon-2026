@@ -6,6 +6,10 @@
 
 **What you will run:** the webpages run from your own folder on your own machine. The map tiles and the survey API come from the shared development server at <https://dev.ridescoredc.com/>.
 
+::: tip Placeholders
+In the code blocks, text shown <span class="placeholder">in red</span> is a placeholder: replace it with your own value.
+:::
+
 ## Step 1: Install the required tools
 
 - [Git](https://git-scm.com/downloads)
@@ -45,7 +49,7 @@ You work on a **fork**, which is your own copy on GitHub, and propose changes ba
 2. In a terminal, clone your fork, replacing `YOUR-USERNAME` with your GitHub user name:
 
    ```sh
-   git clone https://github.com/YOUR-USERNAME/ridescoredc-website.git
+   git clone https://github.com/<<YOUR-USERNAME>>/ridescoredc-website.git
    cd ridescoredc-website
    git remote add upstream https://github.com/civictechdc/ridescoredc-website.git
    ```
@@ -55,7 +59,7 @@ You work on a **fork**, which is your own copy on GitHub, and propose changes ba
 
    ```sh
    git checkout develop
-   git checkout -b CATEGORY/DESCRIPTION
+   git checkout -b <<CATEGORY>>/<<DESCRIPTION>>
    ```
 
    The second command creates your branch from whatever branch you are on, so the order matters. A fresh clone already starts on `develop`, but run the first command anyway so your branch can never start from `main` by accident.
@@ -170,9 +174,9 @@ git diff          # every line is one you meant to write
 Stage the files you changed by naming them, and avoid the catch-all `git add -A`:
 
 ```sh
-git add FILE1 FILE2
-git commit -m "Short description of what changed"
-git push -u origin your/branch-name
+git add <<FILE1>> <<FILE2>>
+git commit -m "<<Short description of what changed>>"
+git push -u origin <<your/branch-name>>
 ```
 
 Then open your fork on GitHub and click **Compare & pull request**. Make sure the target branch is `develop`. Describe what changed and why, and add a screenshot for anything visual.
