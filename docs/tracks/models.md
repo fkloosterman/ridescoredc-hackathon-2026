@@ -1,17 +1,37 @@
-# Track 2: Bike Safety Models
+# Models
 
-RideScore DC currently scores streets using a modified Level of Traffic Stress (LTS) model and a Bicycle Network Analysis (BNA) model, with CycleRAP parameters also mapped out.
+**Goal.** This track is open-ended. Build any model or analysis of cyclist safety in DC. You don't have to use our model or reproduce an existing method. A well-supported analysis that shows something new is as valuable as a new model. Small groups work well here, and every experience level is welcome.
 
-This track is open-ended: build any bicycle-safety-relevant model of your choosing. It doesn't need to fit within RideScore DC's existing methodologies. You'll have access to a completed data pipeline and dataset (OSM enriched with DC Open Data, conflated against the DC Roadway SubBlock spine) with setup instructions, so you can focus on the modeling problem itself.
+## The challenges RideScore DC is facing
 
-## Ideas
+RideScore DC turns public data into a map of how safe and comfortable each street in Washington, DC is to bike. We have identified three open challenges, listed below.
 
-- New or hybrid stress/safety scoring approaches
-- Models that weight specific risk factors: intersections, bike lane type, traffic volume, lighting
-- Predictive models for crash risk
-- Exploratory analyses that surface patterns the existing models miss
+<span class="alert">Pick one challenge per team at the start.</span> Not sure which? Choose by what you like doing:
 
-## Before you come
+- statistics and modelling → [Challenge 1](#challenge-1-define-and-compute-bike-safety-scores)
+- geodata wrangling → [Challenge 2](#challenge-2-build-a-stable-base-map-of-bike-infrastructure)
+- software engineering → [Challenge 3](#challenge-3-construct-a-production-data-pipeline)
 
-Get the data ahead of time by picking one option: download the snapshot from Hugging Face (easiest), run the basemap notebook once, or run the scoring pipeline once (includes scores and crash data). Tools: Python, uv and Jupyter. Code lives in [ridescoredc-models](https://github.com/civictechdc/ridescoredc-models).
+## Challenge 1: Define and compute bike safety scores
 
+Define and compute bike safety scores from public data, either using an existing methodology or a custom score. Consider factors that you believe contribute to a (un)safe biking experience: which streets are safe, and how should we say so?
+
+Find more details in the [Challenge 1 Guide](/tracks/models/challenge-1). For this challenge, you will use Python, [`uv`](https://docs.astral.sh/uv/), and Jupyter.
+
+<span class="alert">To do before Saturday.</span> Setup the development environment and download the data snapshot with DC’s bikeable street network and attributes derived from OpenStreetMap and Open Data DC.
+
+## Challenge 2: Build a stable base map of bike infrastructure
+
+Start from OpenStreetMap (OSM) and incorporate features and attributes from other sources, such as Open Data DC. The hard parts are how to segment OSM roads, how to fill in missing tags, and how to keep a street's ID the same when the data is rebuilt.
+
+Find more details in the [Challenge 2 Guide](/tracks/models/challenge-2). For this challenge, you will use Python, [`uv`](https://docs.astral.sh/uv/), and Jupyter.
+
+<span class="alert">To do before Saturday.</span> Setup the development environment and run the Jupyter notebook once.
+
+## Challenge 3: Construct a production data pipeline
+
+Build the pipeline that computes the safety scores and produces a publicly consumable data package, the same one the RideScore DC website uses.
+
+Find more details in the [Challenge 3 Guide](/tracks/models/challenge-3). For this challenge, you will use Python and [`uv`](https://docs.astral.sh/uv/).
+
+<span class="alert">To do before Saturday.</span> Setup the development environment and execute the pipeline once.

@@ -1,23 +1,19 @@
-# Windows (WSL) setup
+# How to set up a Linux development environment inside Windows
 
-How to set up a Linux development environment inside Windows. The Windows Subsystem for Linux (WSL) gives you a full Linux environment directly inside Windows, which makes every command in the developer guides the same as on macOS and Linux.
-
-::: tip Placeholders
-In the code blocks, text shown <span class="placeholder">in red</span> is a placeholder: replace it with your own value.
-:::
+Setting up the Windows Subsystem for Linux (WSL) provides a full Linux development environment directly inside Windows.
 
 ## Step 1: Install WSL 2 (Ubuntu)
 
-1. Open PowerShell or Command Prompt as Administrator (right-click and select **Run as administrator**).
-2. Run:
+1. Open **PowerShell** or **Command Prompt** as Administrator (right-click and select **Run as administrator**).
+2. Run the following command:
 
-   ```powershell
+   ```sh
    wsl --install
    ```
 
-   This enables the necessary features, downloads the Linux kernel, and installs Ubuntu by default.
-3. Restart your computer when prompted.
-4. After restarting, a terminal window opens automatically to complete the Ubuntu installation.
+   *(This command enables necessary features, downloads the Linux kernel, and installs Ubuntu by default.)*
+3. **Restart your computer** when prompted.
+4. After restarting, a terminal window will open automatically to complete the Ubuntu installation.
 5. Enter a username and password for your Linux environment when prompted:
 
    ```text
@@ -26,70 +22,85 @@ In the code blocks, text shown <span class="placeholder">in red</span> is a plac
    Retype new password:
    ```
 
-   The password is entered blindly: no characters are shown on the screen.
+   Note that the password is entered blindly and no characters are shown on the screen.
 
-## Step 2: Update Ubuntu packages
+## Step 2: Update Ubuntu Packages
 
-Open the Ubuntu app from your Start Menu and run:
+Before installing software, ensure your package list and installed packages are up to date.
 
-```sh
-sudo apt update && sudo apt upgrade -y
-```
+1. Open the **Ubuntu** app from your Start Menu.
+2. Run the update command:
 
-## Step 3: Install and configure Git
+   ```sh
+   sudo apt update && sudo apt upgrade -y
+   ```
 
-```sh
-sudo apt install git -y
-git --version
-```
+## Step 3: Install and Configure Git
 
-Configure your Git identity, replacing the name and email with your own:
+Git allows you to track code changes and connect to repositories like GitHub.
 
-```sh
-git config --global user.name "<<Your Name>>"
-git config --global user.email "<<your.email@example.com>>"
-```
+1. Install Git:
 
-## Step 4: Accessing files between Windows and Linux
+   ```sh
+   sudo apt install git -y
+   ```
+2. Verify installation:
 
-WSL 2 runs on a Linux virtual filesystem, but both operating systems can access each other's files.
+   ```sh
+   git --version
+   ```
+3. Configure your Git identity (replace <code><span class="placeholder">Your Name</span></code> and [<code class="placeholder">your.email@example.com</code>](mailto:your.email@example.com) with your actual name and email address):
 
-**Linux files from Windows.** In File Explorer, scroll down the left sidebar to **Linux**, or type `\\wsl$` in the address bar. Alternatively, from your Linux terminal, open the current directory in File Explorer:
+   ```sh
+   git config --global user.name "<<Your Name>>"
+   ```
 
-```sh
-explorer.exe .
-```
+   `git config --global user.email "`[<code class="placeholder">your.email@example.com</code>](mailto:your.email@example.com)`"`
 
-**Windows files from Linux.** Your Windows drives are mounted under `/mnt/`. For example, for the C: drive:
+## Step 4: Accessing Files Between Windows and Linux
 
-```sh
-cd /mnt/c/Users/<<YourWindowsUsername>>/
-```
+WSL 2 operates on a Linux virtual filesystem, but both operating systems can access each other's files.
 
-::: tip Best practice
-Keep your project source code inside the Linux filesystem (for example `/home/username/projects/`). It is significantly faster than working across `/mnt/c/`.
-:::
+### Accessing Linux files from Windows
 
-## Step 5: Set up Visual Studio Code for WSL
+- Open **File Explorer** in Windows.
+- In the left sidebar, scroll down to Linux (or type `\\wsl$` in the address bar).
+- Alternatively, inside your Linux terminal, open the current directory in Windows File Explorer by typing:
 
-1. Download and install [VS Code](https://code.visualstudio.com/) on Windows (not inside Linux).
-2. Open VS Code, go to the Extensions tab (Ctrl+Shift+X), search for **WSL**, and install the extension by Microsoft.
-3. In your Linux terminal, navigate to a project directory and launch VS Code:
+  ```sh
+  explorer.exe .
+  ```
+
+### Accessing Windows files from Linux
+
+- Your Windows drives are mounted inside Linux under /mnt/.
+- To navigate to your Windows C: drive, run the following command, replacing <code><span class="placeholder">YourWindowsUsername</span></code> with your actual user name:
+
+  ```sh
+  cd /mnt/c/Users/<<YourWindowsUsername>>/
+  ```
+- **Best Practice:** Always keep your project source code files inside the Linux filesystem (e.g., in <code>/home/<span class="placeholder">username</span>/projects/</code>). Storing project files directly in Linux offers significantly faster performance than working across `/mnt/c/`.
+
+## Step 5: Set Up Visual Studio Code for WSL
+
+VS Code lets you edit Linux files seamlessly from Windows.
+
+1. Download and install [VS Code on Windows](https://code.visualstudio.com/) (not inside Linux).
+2. Open VS Code, go to the **Extensions tab** (`Ctrl + Shift + X`), search for **WSL**, and install the extension by Microsoft.
+3. Open your Linux terminal, navigate to a project directory, and launch VS Code:
 
    ```sh
    code .
    ```
-4. VS Code installs the WSL server components automatically and opens the workspace.
+4. VS Code will install the WSL server components automatically and open the workspace.
 
-## Step 6: Install and configure Docker Desktop
-
-Only needed for the [Full Stack guide](/tracks/website-ui/full-stack-guide).
+## Step 6: Install and Configure Docker Desktop
 
 1. Download and install [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/).
-2. During installation, check **Use WSL 2 instead of Hyper-V**.
+2. During installation, check the box for **Use WSL 2 instead of Hyper-V**.
 3. Launch Docker Desktop after installation.
-4. Open Docker Desktop **Settings > Resources > WSL Integration**.
-5. Enable integration with your Ubuntu distribution and click **Apply & restart**.
+4. Open Docker Desktop **Settings &gt; Resources &gt; WSL Integration**.
+5. Enable integration with your **Ubuntu** distribution and click **Apply & restart**.
 6. Verify Docker works in your Ubuntu terminal:
 
    ```sh
@@ -99,18 +110,22 @@ Only needed for the [Full Stack guide](/tracks/website-ui/full-stack-guide).
 
 ## Step 7: Install uv
 
-[uv](https://docs.astral.sh/uv/) is a fast, single-binary Python package and project manager that replaces pip, virtualenv and pip-tools. Only needed for the Full Stack guide.
+`uv` is an extremely fast, single-binary Python package and project manager that can handle package installation, virtual environments, and dependency management.
 
-```sh
-curl -LsSf https://astral.sh/uv/install.sh | sh
-source $HOME/.cargo/env   # or restart your terminal
-uv --version
-```
+1. Open your **Ubuntu** terminal.
+2. Install uv using the official installer script:
+   `curl -LsSf` [`https://astral.sh/uv/install.sh`](https://astral.sh/uv/install.sh) `| sh`
+3. Restart your terminal, or reload your shell configuration:
 
-## Running web servers inside Linux
+   ```sh
+   source ~/.bashrc
+   ```
+4. Verify the installation:
 
-WSL 2 forwards all localhost ports from Linux to Windows. Any web server running inside Linux (Node/Vite, an nginx container, Jupyter Lab) is immediately available in your Windows browser at `http://localhost:PORT`.
+   ```sh
+   uv --version
+   ```
 
-## Next
+## Running web servers or Jupyter Lab inside Linux
 
-Continue with the [Front-End Developer Guide](/tracks/website-ui/frontend-guide) or the [Full Stack Developer Guide](/tracks/website-ui/full-stack-guide).
+WSL 2 automatically forwards all `localhost` ports from Linux to Windows, so any web server running inside Linux—whether Node/Vite, an Nginx container, or Jupyter Lab—is immediately accessible in your Windows browser at [`http://localhost`](http://localhost)`:<port>`.
