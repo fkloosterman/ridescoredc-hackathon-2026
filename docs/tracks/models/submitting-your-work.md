@@ -9,8 +9,8 @@ We'd love for good work to end up on the RideScore DC map. Getting something ont
 | Challenge | Your results | Your code |
 |---|---|---|
 | **1. Safety scores** | One row per street segment, matched to its ID (see below) | The notebook that produces those results from the data |
-| **2. Base map** | *\[CONFIRM: the rebuilt base map as a file, with the notebook that produced it, plus a short write-up of the choices you made\]* | The notebook or script |
-| **3. Data pipeline** | *\[CONFIRM: a pipeline change or new model that runs with `ridescore run` and passes `uv run pytest`\]* | A pull request against `ridescoredc-models` (see "Where to put it") |
+| **2. Base map** | the notebook, plus a short write-up of the choices you made | The notebook or script |
+| **3. Data pipeline** | a pipeline change or new model that runs with `ridescore run` and passes `uv run pytest` | A pull request against `ridescoredc-models` (see "Where to put it") |
 
 ### Results keyed to an ID (Challenge 1, and any scored output)
 

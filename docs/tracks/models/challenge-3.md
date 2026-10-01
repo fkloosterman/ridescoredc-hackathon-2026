@@ -4,7 +4,7 @@
 
 The pipeline is the `ridescore` package in `ridescoredc-models`. It turns public DC data into our scored street network, with our implementation of Level of Traffic Stress and custom RideScore scores plus crash data. The pipeline **automates** the computation (one command instead of a hand-run notebook), makes it **repeatable** (every run records its sources, dates and settings) and **shared** (the output is a data package that the public can use and that the website loads to draw the map).
 
-*Related pages: [Setting Up Your Computer](/tracks/models/setting-up-your-computer) · [Submitting Your Work](/tracks/models/submitting-your-work) · Data Package Description · [Bicycle Network Analysis (BNA)](/tracks/models/bikescore-bna) · [Challenge 1: Safety scores](/tracks/models/challenge-1) · [Challenge 2: Base map](/tracks/models/challenge-2)*
+*Related pages: [Setting Up Your Computer](/tracks/models/setting-up-your-computer) · [Submitting Your Work](/tracks/models/submitting-your-work) · [Data Package Description](/tracks/website-ui/the-data) · [Bicycle Network Analysis (BNA)](/tracks/models/bikescore-bna) · [Challenge 1: Safety scores](/tracks/models/challenge-1) · [Challenge 2: Base map](/tracks/models/challenge-2)*
 
 ---
 
@@ -106,7 +106,7 @@ Problems with `uv`, `git`, Python or Windows paths? See the table at the end of 
 
 Every threshold, URL and lookup table is in [`config.py`](http://config.py).
 
-Full details, including recipes for changing the pipeline: \[LINK TO FABIAN'S FULL GUIDE\]. The design proposals behind where the pipeline is heading (stages, dataset descriptions, deployment) are in the repository wiki: [https://github.com/civictechdc/ridescoredc-models/wiki](https://github.com/civictechdc/ridescoredc-models/wiki).
+The design proposals behind where the pipeline is heading (stages, dataset descriptions, deployment) are in the repository wiki: [https://github.com/civictechdc/ridescoredc-models/wiki](https://github.com/civictechdc/ridescoredc-models/wiki).
 
 ## 3. Project ideas
 
