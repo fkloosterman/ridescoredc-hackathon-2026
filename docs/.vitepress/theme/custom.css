@@ -36,3 +36,11 @@
 /* Values the reader must replace: <<like this>> in code blocks */
 .placeholder, .placeholder span { color: #dc2626 !important; font-weight: 600; }
 .dark .placeholder, .dark .placeholder span { color: #f87171 !important; }
+
+/* Red emphasis from the source guide (non-code) */
+.alert { color: #dc2626; font-weight: 600; }
+.dark .alert { color: #f87171; }
+
+/* Green highlighted table cells (schedule build blocks) */
+.vp-doc td:has(> .bg-green) { background: rgba(34, 197, 94, 0.16); }
+.vp-doc td > .bg-green { display: block; }

@@ -1,13 +1,8 @@
-# The data
+# The Data
 
-RideScore DC publishes two artifacts:
+RideScore DC publishes two artifacts: a **data package** (Parquet files, the road network and safety scores) and a **serving bundle** (SQL, deciding what a map on the website may show). `npm run data` downloads both and loads them into your local database; the [Full Stack Developer Guide](/tracks/website-ui/full-stack-guide) covers the loading commands.
 
-- a **data package**: Parquet files with the road network and safety scores
-- a **serving bundle**: SQL deciding what a map on the website may show
-
-`npm run data` downloads both and loads them into your local database; the [Full Stack Developer Guide](/tracks/website-ui/full-stack-guide) covers the loading commands.
-
-The data set currently shown on the website comes from public Open Data DC: the [roadway block](https://opendata.dc.gov/datasets/DCGIS::roadway-block/about) network, [crash records](https://opendata.dc.gov/datasets/crashes-in-dc/about), and the Washington DC boundary.
+The currently published data set that is shown on the website comes from public Open Data DC: the [roadway block](https://opendata.dc.gov/datasets/DCGIS::roadway-block/about) network, [crash records](https://opendata.dc.gov/datasets/crashes-in-dc/about), and the Washington DC boundary.
 
 ## The three datasets
 
@@ -17,12 +12,12 @@ The data set currently shown on the website comes from public Open Data DC: the 
 | `crashes` | 2,224 | one crash that injured or killed a cyclist, positioned |
 | `ridescore_v1_scores` | 13,829 | the safety score and its components for one block |
 
-## `road_segment`
+### `road_segment`
 
 | Column | Meaning |
 |---|---|
 | `segment_id` | the block's durable identity (DDOT `BLOCKKEY`); feedback is stored against it |
-| `tile_id` | integer for MapLibre feature-state: per build, not durable |
+| `tile_id` | integer for MapLibre feature-state — **per build, not durable** |
 | `route_id`, `route_name` | the street the block belongs to |
 | `function` | Local, Collector, Minor Arterial, Principal/Primary Arterial, Other Freeway and Expressway, Interstate, Other |
 | `num_lanes_raw` / `num_lanes` | lane count as published / with missing values filled in |
@@ -32,5 +27,3 @@ The data set currently shown on the website comes from public Open Data DC: the 
 | `len` | segment length |
 | `crash_count_5yr`, `serious_injury_count_5yr`, `fatal_count_5yr` | crashes attached to the block within the run's five-year window |
 | `geometry` | simplified line geometry |
-
-For how the scores are produced and how the data reaches the map, see [How the site works](/tracks/website-ui/how-the-site-works). The scoring pipeline lives in [ridescoredc-models](https://github.com/civictechdc/ridescoredc-models).
