@@ -44,3 +44,47 @@
 /* Green highlighted table cells (schedule build blocks) */
 .vp-doc td:has(> .bg-green) { background: rgba(34, 197, 94, 0.16); }
 .vp-doc td > .bg-green { display: block; }
+
+/* Topics index: table-like rows that expand to show context. */
+.topic-list { border: 1px solid var(--vp-c-divider); border-radius: 8px; overflow: hidden; margin: 16px 0 24px; }
+.topic-head, .topic-list summary { display: grid; grid-template-columns: 2.3fr 1.1fr 1.3fr 1.4fr; gap: 12px; padding: 10px 16px; align-items: center; }
+.topic-head { background: var(--vp-c-bg-soft); font-weight: 600; font-size: 14px; }
+.topic-list details { border-top: 1px solid var(--vp-c-divider); }
+.topic-list summary { cursor: pointer; list-style: none; font-size: 14px; line-height: 1.45; }
+.topic-list summary::-webkit-details-marker { display: none; }
+.topic-list summary:hover { background: var(--vp-c-bg-soft); }
+.topic-list summary .t { font-weight: 600; color: var(--vp-c-brand-1); }
+.topic-list summary .t::before { content: '▸'; display: inline-block; width: 1.1em; transition: transform .15s; }
+.topic-list details[open] summary .t::before { transform: rotate(90deg); }
+.topic-body { padding: 2px 16px 12px 34px; font-size: 14px; background: var(--vp-c-bg-soft); }
+.topic-body p { margin: 8px 0; }
+@media (max-width: 640px) {
+  .topic-head { display: none; }
+  .topic-list summary { grid-template-columns: 1fr; gap: 2px; }
+  .topic-list summary span:not(.t) { font-size: 13px; color: var(--vp-c-text-2); padding-left: 1.1em; }
+}
+
+/* "- [ ] item" checklists (see .vitepress/taskLists.ts). */
+.vp-doc li.task-list-item { list-style: none; margin-left: -1.25em; }
+.vp-doc .task-list-item-checkbox { margin: 0 .45em 0 0; vertical-align: -1px; accent-color: var(--vp-c-brand-1); }
+
+/* The "Open topic N" link sits on its own line, larger than the description. */
+.topic-body p:last-child { margin-top: 4px; font-size: 15px; font-weight: 600; }
+
+/* Topic pages: the "At a glance" box. Large and scannable, so readers can tell quickly
+   whether a topic suits them and what it takes. */
+.glance { margin: 20px 0 8px; }
+.glance table { display: table; width: 100%; margin: 0; border: 2px solid var(--vp-c-brand-1); border-radius: 12px; border-collapse: separate; border-spacing: 0; overflow: hidden; font-size: 16px; }
+.glance thead { display: none; }
+.glance tr { background: var(--vp-c-bg) !important; }
+.glance tr:not(:last-child) td { border-bottom: 1px solid var(--vp-c-divider); }
+.glance td { border: none; padding: 12px 18px; vertical-align: middle; line-height: 1.5; }
+.glance td:first-child { width: 30%; white-space: nowrap; font-weight: 700; color: var(--vp-c-text-1); background: var(--vp-c-bg-soft); }
+.glance tr:first-child a, .glance .chip { display: inline-block; margin: 3px 6px 3px 0; padding: 5px 14px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); border: 1px solid var(--vp-c-brand-1); }
+.glance tr:first-child a:hover { background: var(--vp-c-brand-1); color: var(--vp-c-white); }
+.glance .chip { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); border-color: var(--vp-c-divider); }
+.glance .or { color: var(--vp-c-text-2); font-size: 14px; margin-right: 6px; }
+@media (max-width: 640px) {
+  .glance td { display: block; width: auto !important; white-space: normal !important; padding: 8px 14px; }
+  .glance td:first-child { padding-bottom: 2px; border-bottom: none !important; }
+}

@@ -1,8 +1,10 @@
 # Acknowledgements
 
-This hackathon exists because our team gave their evenings, weekends and more to RideScore DC. Thank you all.
+This hackathon exists because our team gave their evenings, weekends and more to RideScore DC, and because of the incredible support and partnership of the volunteers at [Civic Tech DC](https://www.civictechdc.org/). Thank you all.
 
 ## Special thanks
+
+**EChO (Eleanor) Ory:** for exceptional team leadership, and for holding a long-term vision of what RideScore DC can build for the DC region. She brought this team together, kept it moving, and made today possible.
 
 **Fabian Kloosterman:** for building the scoring pipeline, writing the developer guides (including the Windows setup guide), drafting the mini-project ideas, merging and deploying the website updates, and shaping much of this guide. So much of what you'll use today runs on his work.
 
