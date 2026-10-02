@@ -23,7 +23,7 @@ You have an idea none of the other topics cover: a feature that would make RideS
 
 ### Why it matters
 
-The topic list reflects what the core team has seen so far. People new to the project, from other cities, professions or ways of getting around, often spot what the team can't. A well-scoped idea that works, even small, can change the project's direction.
+The topic list reflects what the core team has seen so far. People new to the project, from other cities, professions or ways of getting around, often spot what the team can't. A small idea that works can change the project's direction.
 
 ### Who it's for
 
@@ -58,15 +58,15 @@ Windows users start with [Windows WSL](/tracks/website-ui/windows-wsl).
 
 - **Size it for 2–3 hours.** Pick the smallest version that shows the idea works. A big idea can be handed in as a plan plus one small working piece.
 - **Check with a mentor at the start.** A two-minute conversation can save an hour: someone may already be working on it, or know where it fits.
-- **The project's rules still apply:** the survey never shows our scores, survey answers are stored by `segment_id`, and there's no build step.
-- **Validate on your local copy.**
+- **A few project habits still apply.** The survey hides our scores, so riders give their own view. Survey answers are saved by `segment_id`, because `tile_id` changes every time the map data is rebuilt. And there's no build step, so what you edit is what visitors get.
+- **Try it on your local copy** before sharing.
 
 ## 3. The challenge
 
 ### Core goal (2–3 hours)
 
 1. Write one sentence: who the feature is for and what it lets them do.
-2. Build the smallest version that shows it, **or** write a one- to two-page plan if it's bigger than a day.
+2. Build the smallest version that shows it, **or** write a one- to two-page plan if it's bigger than an afternoon.
 3. Show it to someone outside your team.
 
 ### Stretch goals
@@ -77,7 +77,7 @@ Windows users start with [Windows WSL](/tracks/website-ui/windows-wsl).
 ## 4. Done when
 
 ::: tip Guideposts, not requirements
-Nothing on this page is a hard rule, and the scope is yours to shape. Use this list to know when you have something worth showing, not as a test to pass. Take the topic somewhere unexpected, combine it with another, or stop at whatever you finish: an honest half-built idea with good notes is a great outcome. This is a collaborative event, not a competition. Ask us anything, help the team next to you, and bring something only you would think of.
+Use this list to tell when you have something worth showing, not as a test to pass. Change the scope, combine topics, or stop at whatever you finish: half-built with good notes is a great result, because this is a collaborative event, not a competition.
 :::
 
 **If you built it:**
@@ -92,16 +92,16 @@ Nothing on this page is a hard rule, and the scope is yours to shape. Use this l
 
 ## 5. Hand in
 
-Share whatever you got to, in whichever form fits:
+Share whatever you got to:
 
-- **Code:** a pull request against `develop`; a draft is fine.
-- **Anything that isn’t code:** a shared Google Drive folder, or a link to a document.
+- **Code:** a pull request against `develop` (a draft is fine).
+- **Anything else:** a shared Google Drive folder, or a link to a document.
 - **The [submission form](/tracks/website-ui/submitting-your-work)**, one per team.
 - **Optional:** a short video link, and two slides in the demo deck for the 4:15 demos.
 
 A plan is just as welcome as code here.
 
-Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor; unfinished work is welcome, and we can help you wrap it up afterwards.
+Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor, because unfinished work with good notes still helps the next volunteer.
 
 ## Resources
 

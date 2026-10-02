@@ -10,6 +10,6 @@ The mini-project ideas are now **topics**, each with its own page: what to insta
 | 4. Make the Map Easier to Understand | [Topic 3: Make the map make sense](/tracks/website-ui/topics/03-make-the-map-make-sense) |
 | 5. Explore the Numbers Behind the Map | [Topic 8: DC by the numbers](/tracks/website-ui/topics/08-dc-by-the-numbers) |
 | 6. Rethink Route Drawing | [Topic 5: Rethink route drawing](/tracks/website-ui/topics/05-rethink-route-drawing) |
-| 7. Experiment with PMTiles | [Topic 9: PMTiles proof of concept](/tracks/website-ui/topics/09-pmtiles-proof-of-concept) |
+| 7. Experiment with PMTiles | [Topic 10: PMTiles proof of concept](/tracks/website-ui/topics/10-pmtiles-proof-of-concept) |
 
 See all 15 topics on the [Topics](/tracks/website-ui/topics) page.

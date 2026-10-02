@@ -19,7 +19,7 @@
 
 ## Problem statement
 
-You found something broken: a button that does nothing, a popup showing `undefined`, a layout that falls apart on your phone, an error in the console. Every bug a first-time visitor hits makes RideScore DC less trustworthy. Find one, prove it, and fix it.
+You found something broken: a button that does nothing, a popup showing `undefined`, a layout that falls apart on your phone, an error in the console. Every bug a first-time visitor hits makes RideScore DC feel less trustworthy. Find one, show it happening, and fix it.
 
 ### Why it matters
 
@@ -33,7 +33,7 @@ Bugs cost trust faster than missing features. A popup showing `undefined`, a but
 ### How it connects
 
 - The **Community Research** track's confusion lists from the morning may point straight at bugs.
-- **Topic 6** covers the two known route-painting bugs; pick something else.
+- **Topic 6** covers the two known route-painting bugs, so pick something else.
 - Anything you can't fix today can become a GitHub issue for the next volunteer.
 
 ### Example ideas
@@ -55,10 +55,10 @@ Bugs cost trust faster than missing features. A popup showing `undefined`, a but
 
 ## 2. Know before you start
 
-- **Where to look.** Open the browser console (F12) on the map and the survey, and try every control. Check a phone-sized screen. The Community Research track's confusion lists are another source.
+- **Where to look.** Open the [browser console](/tracks/website-ui#glossary) (press F12) on the map and the survey, and try every control. Check a phone-sized screen. The Community Research track's confusion lists are another source.
 - **Check it's new.** Look at the [open issues and pull requests](https://github.com/civictechdc/ridescoredc-website/issues) first, and skip the two route-selector bugs (Topic 6).
 - **Is it a bug or a design question?** "This is confusing" is often a design problem (Topic 15). A bug is something that doesn't do what it's clearly meant to.
-- **Keep it small.** One bug per pull request.
+- **Keep it small.** One bug per pull request, because small changes are quicker to review.
 
 ## 3. The challenge
 
@@ -79,7 +79,7 @@ If you find more than you can fix, write the rest up as GitHub issues with repro
 ## 4. Done when
 
 ::: tip Guideposts, not requirements
-Nothing on this page is a hard rule, and the scope is yours to shape. Use this list to know when you have something worth showing, not as a test to pass. Take the topic somewhere unexpected, combine it with another, or stop at whatever you finish: an honest half-built idea with good notes is a great outcome. This is a collaborative event, not a competition. Ask us anything, help the team next to you, and bring something only you would think of.
+Use this list to tell when you have something worth showing, not as a test to pass. Change the scope, combine topics, or stop at whatever you finish: half-built with good notes is a great result, because this is a collaborative event, not a competition.
 :::
 
 - [ ] The pull request describes the steps to reproduce, the expected result and the actual result.
@@ -88,16 +88,16 @@ Nothing on this page is a hard rule, and the scope is yours to shape. Use this l
 
 ## 5. Hand in
 
-Share whatever you got to, in whichever form fits:
+Share whatever you got to:
 
-- **Code:** a pull request against `develop`; a draft is fine.
-- **Anything that isn’t code:** a shared Google Drive folder, or a link to a document.
+- **Code:** a pull request against `develop` (a draft is fine).
+- **Anything else:** a shared Google Drive folder, or a link to a document.
 - **The [submission form](/tracks/website-ui/submitting-your-work)**, one per team.
 - **Optional:** a short video link, and two slides in the demo deck for the 4:15 demos.
 
 Steps to reproduce in the pull request make it quick to review.
 
-Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor; unfinished work is welcome, and we can help you wrap it up afterwards.
+Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor, because unfinished work with good notes still helps the next volunteer.
 
 ## Resources
 

@@ -11,7 +11,7 @@ aside: false
 
 **Output** tells you what you hand in: a pull request on GitHub, a shared Google Drive folder, or your choice of a plan or a proof of concept. Every team also fills in one [submission form](/tracks/website-ui/submitting-your-work).
 
-Click a row for a short description of the topic.
+Topics are grouped by the level they start at; a few can grow into Advanced if you want them to. Click a row for a short description.
 
 Topics 3–7 come with a **background pack** of design notes and analysis, linked from each topic page, or [all notes across topics in one zip](/downloads/website-ui/all-notes-across-topics.zip) (just in case 😄). Using an AI assistant? [all-materials-for-ai.zip](/downloads/website-ui/all-materials-for-ai.zip) has every page of this guide plus the notes, in Markdown, ready to upload.
 
@@ -89,14 +89,14 @@ Riders paint the route they rode with a finger or mouse, which is quick but erro
 <summary><span class="t">6. Fix the route-selector bugs</span><span>Bug</span><span>Front-End</span><span>Pull request</span></summary>
 <div class="topic-body">
 
-The paint tool has two bugs with known causes: at intersections it snaps to the cross street, and long blocks can vanish when you lift your finger. Pick one, reproduce it on a fixed route, fix it, and prove the fix with before and after recordings. Both bugs reproduce on the dev site with no setup.
+The paint tool has two bugs with known causes: at intersections it snaps to the cross street, and long blocks can vanish when you lift your finger. Pick one, reproduce it on a fixed route, fix it, and check the fix on the same route. Both bugs reproduce on the dev site with no setup.
 
 [Open topic 6 →](/tracks/website-ui/topics/06-fix-the-route-selector-bugs)
 
 </div>
 </details>
 <details>
-<summary><span class="t">7. Riders report hazards</span><span>Feature</span><span>Full Stack</span><span>Plan, or proof of concept</span></summary>
+<summary><span class="t">7. Riders report hazards</span><span>Feature</span><span>Full Stack</span><span>Pull request or a plan</span></summary>
 <div class="topic-body">
 
 Riders know about blocked lanes, potholes and near misses that no dataset records. Work out how a rider would report a hazard on a block: what to collect, where it's stored, and how reports are moderated. Build a proof of concept on your own local stack, or hand in a plan.
@@ -116,12 +116,12 @@ The map shows one block at a time, but planners ask whole-city questions, like h
 </div>
 </details>
 <details>
-<summary><span class="t">10. Split the page code into files</span><span>Architecture</span><span>Front-End</span><span>Pull request</span></summary>
+<summary><span class="t">9. Split the page code into files</span><span>Architecture</span><span>Front-End</span><span>Pull request</span></summary>
 <div class="topic-body">
 
 Each page is one large HTML file with inline CSS and JavaScript and dozens of onclick attributes, which makes every change hard to review. Split one page into separate files and modules without changing how it behaves. This touches the files every other code team is editing, so agree on a merge plan with a mentor first.
 
-[Open topic 10 →](/tracks/website-ui/topics/10-split-the-page-code)
+[Open topic 9 →](/tracks/website-ui/topics/09-split-the-page-code)
 
 </div>
 </details>
@@ -132,12 +132,12 @@ Each page is one large HTML file with inline CSS and JavaScript and dozens of on
 <div class="topic-list">
 <div class="topic-head"><span>Topic</span><span>Category</span><span>Setup</span><span>Output</span></div>
 <details>
-<summary><span class="t">9. PMTiles proof of concept</span><span>Architecture</span><span>Data tools + Front-End</span><span>Plan, or proof of concept</span></summary>
+<summary><span class="t">10. PMTiles proof of concept</span><span>Architecture</span><span>Data tools + Front-End</span><span>Pull request or a plan</span></summary>
 <div class="topic-body">
 
 Every map tile is generated on request by a server reading a live database. PMTiles packs a whole tile set into one static file a browser can read directly, which could be simpler and cheaper. The catch is the map's Custom weights, which recompute scores live. Build a small proof of concept and compare, or write a plan.
 
-[Open topic 9 →](/tracks/website-ui/topics/09-pmtiles-proof-of-concept)
+[Open topic 10 →](/tracks/website-ui/topics/10-pmtiles-proof-of-concept)
 
 </div>
 </details>
@@ -152,7 +152,7 @@ The website hard-codes every label, unit, color and popup field, so each new dat
 </div>
 </details>
 <details>
-<summary><span class="t">12. Read-only admin page</span><span>Feature</span><span>Full Stack</span><span>Plan, or proof of concept</span></summary>
+<summary><span class="t">12. Read-only admin page</span><span>Feature</span><span>Full Stack</span><span>Pull request or a plan</span></summary>
 <div class="topic-body">
 
 Nobody on the team can see survey responses without writing SQL. Build a read-only page that lists responses, using made-up data on your own local stack, or plan one. Responses are personal data, so deciding who can see the page is part of the job.
@@ -189,7 +189,7 @@ Have an idea none of the other topics cover? Write one sentence on who it's for 
 </details>
 </div>
 
-**Several teams can take the same topic.** Topics 4, 5, 6 and 10 all edit the survey or map page, so if you pick one of them, check with a mentor who else is in the same file.
+**Several teams can take the same topic.** Topics 3–7, 9 and 13 often edit the same map or survey page, so if you pick one of them, check with a mentor who else is in that file, because two teams changing the same lines makes merging harder.
 
 ### How to submit
 
@@ -199,6 +199,6 @@ Details are in each topic and on [Submitting your work](/tracks/website-ui/submi
 - [ ] **Google Drive folder** of documents and links, if relevant (for example planning, design and spec topics), checked in a private browser window
 - [ ] **The [Website/UI submission form](https://forms.cloud.microsoft/r/ghpNKYPvgr)**, one per team
 - [ ] **Your video**, if you made one, linked on the form
-- [ ] **Two slides** in the [RideScore DC Demo Deck](https://docs.google.com/presentation/d/1ic9nFhiB6mftG0uKtgwuIJ0GgWwcM-_T/edit?usp=sharing&ouid=115249639562160932471&rtpof=true&sd=true), in the Website section
+- [ ] **Two slides** (optional) in the [RideScore DC Demo Deck](https://docs.google.com/presentation/d/1ic9nFhiB6mftG0uKtgwuIJ0GgWwcM-_T/edit?usp=sharing&ouid=115249639562160932471&rtpof=true&sd=true), in the Website section
 
 Not sure which topic to pick? Ask a mentor at the start; that's what we're here for.

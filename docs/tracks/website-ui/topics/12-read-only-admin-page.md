@@ -19,11 +19,11 @@
 
 ## Problem statement
 
-Survey responses are saved in the database, but nobody on the team can look at them without writing SQL. A simple read-only view would let the team see what riders are saying, spot problems with the survey, and decide what to change. Survey responses are personal data, though, so **who can see the page matters more than the page itself.**
+Riders' survey answers are saved, but the team can only read them by writing database queries (SQL). A simple read-only page would show what riders are saying, reveal confusing questions, and help decide what to change. The answers are personal, though, so **who can see the page matters more than the page itself.**
 
 ### Why it matters
 
-The survey only helps if someone reads the answers. Right now the team can't easily see whether responses are arriving, whether a question confuses people, or which streets riders keep flagging. A simple view would close that loop. But survey responses describe where real people ride, so the page must be designed around privacy from the start.
+The survey only helps if someone reads the answers. Right now the team can't easily see whether responses are arriving, whether a question confuses people, or which streets riders keep flagging. A simple view would close that loop. Because survey answers describe where real people ride, privacy is part of the design from the start.
 
 ### Who it's for
 
@@ -57,14 +57,14 @@ The survey only helps if someone reads the answers. Right now the team can't eas
 | Symptom | Fix |
 |---|---|
 | `/health` returns 502 on the very first `npm run stack` | Run `npm run restart -- fastapi`. |
-| Your new endpoint returns 404 | Check its route starts with `/api/`; nginx only sends `/api/...` to the API. |
+| Your new endpoint returns 404 | Start its route with `/api/`, because nginx (the web server that routes requests) only sends `/api/...` addresses to the API. |
 
 ## 2. Know before you start
 
-- <span class="alert">Use local, made-up data only.</span> Build against your own Docker stack, and fill it with test responses you create by submitting the survey at `http://localhost:8000/survey/`. Never point this page at the dev or production database.
-- **Where responses live.** Three tables in the `app` schema: `survey_submissions` (one row per survey), `survey_contiguous_segments` (one per street section, with ratings) and `survey_granular_segments` (one per block). See [Looking at the data](/tracks/website-ui/full-stack-guide#looking-at-the-data).
-- **The API serves no pages.** Pages live in `frontend/`; the API only answers `/api/...`. A new read endpoint goes in `api/main.py`. See [Add or change an API endpoint](/tracks/website-ui/making-changes#add-or-change-an-api-endpoint).
-- **Access control is part of the job.** Without it, the page can never be deployed. Your plan or proof of concept must say who can see it and how they log in.
+- <span class="alert">Use local, made-up data only.</span> Build against your own Docker stack, and fill it with test responses you create by submitting the survey at `http://localhost:8000/survey/`. Please keep it off the dev and production databases, because those hold real riders' answers.
+- **Where responses live.** Three tables in the `app` [schema](/tracks/website-ui#glossary) (a named group of tables): `survey_submissions` (one row per survey), `survey_contiguous_segments` (one per street section, with ratings) and `survey_granular_segments` (one per block). See [Looking at the data](/tracks/website-ui/full-stack-guide#looking-at-the-data).
+- **The API serves no pages.** Pages live in `frontend/`; the API only answers `/api/...`. A new read endpoint (an API address your page can ask for data) goes in `api/main.py`. See [Add or change an API endpoint](/tracks/website-ui/making-changes#add-or-change-an-api-endpoint).
+- **Access control is part of the job.** A good plan says who can see the page and how they sign in, because survey answers describe where real people ride.
 
 ## 3. The challenge
 
@@ -72,8 +72,8 @@ The survey only helps if someone reads the answers. Right now the team can't eas
 
 Choose one:
 
-- **Proof of concept.** A read-only `GET /api/...` endpoint and a page that lists responses (newest first), with the ratings per street section, running on your local stack, plus a written proposal for access control.
-- **Plan.** A one- to two-page plan: what the page shows, what it leaves out, how access is controlled, how long data is kept, and what the team must decide.
+- **Proof of concept.** A read-only `GET /api/...` endpoint and a page that lists responses (newest first) with the ratings per street section, running on your local stack. Add a few notes on access control.
+- **Plan.** A one- to two-page plan: what the page shows, what it leaves out, how access is controlled, how long data is kept, and what the team still needs to decide.
 
 ### Approaches
 
@@ -90,14 +90,14 @@ Choose one:
 ## 4. Done when
 
 ::: tip Guideposts, not requirements
-Nothing on this page is a hard rule, and the scope is yours to shape. Use this list to know when you have something worth showing, not as a test to pass. Take the topic somewhere unexpected, combine it with another, or stop at whatever you finish: an honest half-built idea with good notes is a great outcome. This is a collaborative event, not a competition. Ask us anything, help the team next to you, and bring something only you would think of.
+Use this list to tell when you have something worth showing, not as a test to pass. Change the scope, combine topics, or stop at whatever you finish: half-built with good notes is a great result, because this is a collaborative event, not a competition.
 :::
 
 **Proof of concept:**
 
 - [ ] The page lists test responses from your local database, with their street sections and ratings.
 - [ ] The endpoint is read-only (no way to change or delete data through it).
-- [ ] An access-control proposal is written in the pull request.
+- [ ] You can explain who should see the page and how they'd sign in.
 - [ ] The survey still submits, and `pytest` still passes.
 
 **Plan:**
@@ -106,16 +106,16 @@ Nothing on this page is a hard rule, and the scope is yours to shape. Use this l
 
 ## 5. Hand in
 
-Share whatever you got to, in whichever form fits:
+Share whatever you got to:
 
-- **Code:** a pull request against `develop`; a draft is fine.
-- **Anything that isn’t code:** a shared Google Drive folder, or a link to a document.
+- **Code:** a pull request against `develop` (a draft is fine).
+- **Anything else:** a shared Google Drive folder, or a link to a document.
 - **The [submission form](/tracks/website-ui/submitting-your-work)**, one per team.
 - **Optional:** a short video link, and two slides in the demo deck for the 4:15 demos.
 
 A plan is just as welcome as a proof of concept here.
 
-Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor; unfinished work is welcome, and we can help you wrap it up afterwards.
+Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor, because unfinished work with good notes still helps the next volunteer.
 
 ## Resources
 

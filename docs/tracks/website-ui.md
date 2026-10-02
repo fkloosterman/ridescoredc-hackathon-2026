@@ -39,12 +39,17 @@ AI tools are encouraged. Two or three hours is short, and a coding, design or wr
 |---|---|
 | **API** | The small Python (FastAPI) service that saves survey responses. It answers addresses starting `/api/`. |
 | **Branch** | Your own line of changes in Git. Make one for each piece of work, starting from `develop`. |
+| **Browser console** | A panel in your browser that shows errors and lets you run small commands. Press F12 (or Cmd+Option+I on a Mac) and choose **Console**. |
+| **Custom panel** | The sliders in the map’s **Settings** panel that let you change how much each street feature counts toward the score. |
 | **Design concept** | Screens that show a new way to use the site, as Figma frames, AI mock-ups or photographed sketches. No code. |
-| **`develop`** | The branch where new work lands. Pull requests go against `develop`, not `main`. |
 | **Dev site** | [dev.ridescoredc.com](https://dev.ridescoredc.com/), the shared development server. Front-End setups get their map data from it. |
+| **`develop`** | The branch where new work lands. Pull requests go against `develop`, not `main`. |
 | **Docker** | Runs the database, API, tile server and nginx on your own machine. Only the Full Stack setup needs it. |
 | **Done when** | The checklist on each topic page that defines a finished result and guides feedback. |
 | **Drive folder** | A Google Drive folder your team shares for anything that isn't code. It must open in a private browser window. |
+| **`dvh`** | A CSS height unit that follows the visible screen on phones, including when the address bar shows or hides. `vh` doesn’t. |
+| **Endpoint** | One address on the API that does one job, for example `POST /api/submissions` saves a survey. |
+| **ES modules** | JavaScript files that share code with `import` and `export`, so each file only loads what it needs. |
 | **Fork** | Your own copy of a repository on GitHub. You push your branch there and open a pull request from it. |
 | **Front-End setup** | Git, Node.js and an editor. Runs the pages on your laptop with `npm run dev`; map data comes from the dev site. Enough for most code topics. |
 | **Full Stack setup** | Front-End plus Docker and uv. Runs the whole site, database included, on your machine. Needed to store new data or change the API. |
@@ -52,12 +57,19 @@ AI tools are encouraged. Two or three hours is short, and a coding, design or wr
 | **MapLibre** | The JavaScript library that draws the map in the browser. |
 | **Martin** | The tile server. It turns database rows into map tiles. |
 | **Migration** | A numbered file that changes the database tables, applied with `npm run migrate`. Never edit one that has already run. |
+| **nginx** | The web server in front of everything. It sends each request to the right place: pages from disk, map tiles to Martin, survey answers to the API. |
+| **Parquet** | A compact file format for tables of data, readable from Python. The published road data comes as Parquet files. |
 | **Plan or proof of concept** | What Advanced topics hand in: a written plan, or a small working piece of code that proves the idea. |
+| **PMTiles** | A single file holding a whole set of map tiles, which a browser can read directly from ordinary web hosting. |
+| **Pointer events** | The browser events for touches, pens and mouse clicks, handled the same way. The paint tool listens to them. |
 | **PostGIS** | The database: PostgreSQL with map geometry support. |
 | **Pull request (PR)** | A request to merge your branch into the project. How code is handed in. |
+| **Pydantic** | The Python library the API uses to check that incoming data has the right shape before saving it. |
 | **RideScore** | The project's safety score for each street block, blending LTS with the bike facility and crash history. |
+| **Schema** | A named area of the database. RideScore DC has three: `data` (roads, crashes, scores), `app` (survey answers) and `serving` (what the map may show). |
 | **`segment_id`** | A street block's lasting ID. Survey answers are stored against it. |
 | **Spec** | A written plan or proposal, for example on the [models wiki](https://github.com/civictechdc/ridescoredc-models/wiki) proposal template. |
 | **Survey** | The page at `/survey/` where a rider paints a route on the map and rates it block by block. It never shows our scores. |
 | **`tile_id`** | A number the map uses internally. It changes with every data build, so never store it. |
+| **tippecanoe** | A command-line tool that turns map data (GeoJSON) into map tiles. It runs on macOS and Linux, or WSL on Windows. |
 | **Vite** | The development server behind `npm run dev`. Serves the pages at `localhost:5173` and reloads on save. |

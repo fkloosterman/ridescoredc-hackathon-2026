@@ -19,7 +19,7 @@
 
 ## Problem statement
 
-Some of RideScore DC's biggest questions aren't code questions yet: what should a bike-safety tool feel like for a rider in a hurry, a parent, or a planner? Good designs now save weeks of building the wrong thing later. This topic needs no coding: design a new way for people to use RideScore DC, from one of the prompts below or from your own idea, and test it with real people in the room.
+Some of RideScore DC's biggest questions aren't code questions yet: what should a bike-safety tool feel like for a rider in a hurry, a parent, or a planner? Good designs now save weeks of building the wrong thing later. This topic needs no coding. Design a new way for people to use RideScore DC, from a prompt below or your own idea. Then test it with real people in the room.
 
 ### Why it matters
 
@@ -45,7 +45,7 @@ The cheapest time to get an idea right is before anyone builds it. A few screens
 | A phone or laptop | Look at the current site and test with people | your own |
 | Google Drive | Share your work | [drive.google.com](https://drive.google.com) |
 
-<span class="alert">Before Saturday:</span> create a free Figma account if you plan to use it, and spend ten minutes on [ridescoredc.com](https://ridescoredc.com) and its [survey](https://dev.ridescoredc.com/survey/). No other install.
+<span class="alert">Before Saturday:</span> create a free Figma account if you plan to use it, and spend ten minutes on [dev.ridescoredc.com](https://dev.ridescoredc.com) and its [survey](https://dev.ridescoredc.com/survey/). No other install.
 
 ### If something goes wrong
 
@@ -57,8 +57,8 @@ The cheapest time to get an idea right is before anyone builds it. A few screens
 ## 2. Know before you start
 
 - **Design for one person.** Pick a rider and a moment: a new commuter planning tomorrow's ride, a parent checking a school route, a delivery rider in a rush, a planner preparing for a council hearing. The Community Research track has persona cards; borrow them.
-- **What exists today.** The map colors streets by a safety score, with a Custom panel to reweight it. The survey lets a rider paint a route and rate it block by block. Nothing yet does route planning or hazard reporting.
-- **The survey must not show our scores** before a rider gives their own view. Keep that in any survey design.
+- **What exists today.** The map colors streets by a safety score, with a Custom panel of sliders to reweight it. The survey lets a rider paint a route and rate it block by block. Nothing yet does route planning or hazard reporting.
+- **Keep our scores out of the survey**, because riders should give their own view first, without being nudged by ours.
 - **Test early.** Five minutes with someone from another track beats an hour of polishing.
 
 ## 3. The challenge
@@ -90,26 +90,26 @@ Pick **one** area and design a concept as three to five screens (Figma frames, A
 ## 4. Done when
 
 ::: tip Guideposts, not requirements
-Nothing on this page is a hard rule, and the scope is yours to shape. Use this list to know when you have something worth showing, not as a test to pass. Take the topic somewhere unexpected, combine it with another, or stop at whatever you finish: an honest half-built idea with good notes is a great outcome. This is a collaborative event, not a competition. Ask us anything, help the team next to you, and bring something only you would think of.
+Use this list to tell when you have something worth showing, not as a test to pass. Change the scope, combine topics, or stop at whatever you finish: half-built with good notes is a great result, because this is a collaborative event, not a competition.
 :::
 
 - [ ] The rider, the problem and the task are written on the first screen.
 - [ ] Three to five screens show one complete task from start to finish.
-- [ ] Notes from at least one test with someone outside your team: what worked, where they got stuck.
-- [ ] A list of the data each screen needs.
+- [ ] You've tested it with at least one person outside your team, and know what worked and where they got stuck.
+- [ ] You can say what data each screen needs.
 
 ## 5. Hand in
 
-Share whatever you got to, in whichever form fits:
+Share whatever you got to:
 
-- **Code:** a pull request against `develop`; a draft is fine.
-- **Anything that isn’t code:** a shared Google Drive folder, or a link to a document.
+- **Code:** a pull request against `develop` (a draft is fine).
+- **Anything else:** a shared Google Drive folder, or a link to a document.
 - **The [submission form](/tracks/website-ui/submitting-your-work)**, one per team.
 - **Optional:** a short video link, and two slides in the demo deck for the 4:15 demos.
 
-Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor; unfinished work is welcome, and we can help you wrap it up afterwards.
+Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor, because unfinished work with good notes still helps the next volunteer.
 
 ## Resources
 
-- [ridescoredc.com](https://ridescoredc.com) · [Survey on the dev site](https://dev.ridescoredc.com/survey/)
+- [dev.ridescoredc.com](https://dev.ridescoredc.com) · [Survey on the dev site](https://dev.ridescoredc.com/survey/)
 - [Figma: getting started](https://help.figma.com/hc/en-us/categories/360002051613) · [Community Research track](/tracks/community-research)

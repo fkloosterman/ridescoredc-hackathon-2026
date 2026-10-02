@@ -1,4 +1,4 @@
-# Topic 9: PMTiles proof of concept
+# Topic 10: PMTiles proof of concept
 
 <Badge type="danger" text="Advanced" /> <Badge type="info" text="Architecture" />
 
@@ -19,13 +19,11 @@
 
 ## Problem statement
 
-Every map tile today is generated on request by Martin from a live PostGIS database. That needs a running server and database for every environment. [PMTiles](https://docs.protomaps.com/pmtiles/) packs a whole tile set into one static file that a browser can read directly from ordinary file hosting, which could make the site cheaper, faster and easier to run.
-
-The catch is the map's **Custom** weights: moving a slider asks the database to recompute every score. Static tiles can't do that unless the score is computed in the browser instead.
+Every street on the map is drawn from map tiles (small squares of map data). Today a live server and database build those tiles each time someone looks. That costs money and volunteer time in every environment. One static file could do the same job, making the site cheaper, faster and easier to run. The catch: the map's **Custom** sliders, which reweight the score live, depend on that database today.
 
 ### Why it matters
 
-Running a live tile server and database costs money and volunteer time, and every environment (local, dev, production) needs one. If the map could be served as static files from ordinary hosting, the site would be cheaper, faster and easier for a small volunteer team to keep running, and easier for another city to copy. The trade-off is real, though, and a proof of concept is the fastest way to find out whether it's worth it.
+Static files would mean less to pay for and less to maintain for a small volunteer team, and would make the site easier for another city to copy. There's a real trade-off, and a proof of concept is the fastest way to see if it's worth it.
 
 ### Who it's for
 
@@ -54,20 +52,23 @@ Running a live tile server and database costs money and volunteer time, and ever
 | pmtiles CLI | Inspects and serves `.pmtiles` files | [github.com/protomaps/go-pmtiles](https://github.com/protomaps/go-pmtiles/releases) |
 | Python with uv, or the Full Stack setup | Export the streets and scores to GeoJSON | [Setting Up Your Computer](/tracks/models/setting-up-your-computer) or the [Full Stack Developer Guide](/tracks/website-ui/full-stack-guide) |
 
-<span class="alert">Do this ahead of time.</span> Install tippecanoe and check `tippecanoe --version` works. **tippecanoe doesn't run natively on Windows**; Windows users need [WSL](/tracks/website-ui/windows-wsl).
+<span class="alert">Do this ahead of time.</span> Install tippecanoe and check that `tippecanoe --version` works. **tippecanoe doesn't run natively on Windows**, so Windows users run it in [WSL](/tracks/website-ui/windows-wsl).
 
 ### If something goes wrong
 
 | Symptom | Fix |
 |---|---|
 | `tippecanoe: command not found` on Windows | Run it inside WSL. |
-| The map shows nothing from your file | Check the `pmtiles` protocol is registered before the map loads, and that the layer's `source-layer` matches the layer name tippecanoe wrote (`pmtiles show yourfile.pmtiles`). |
+| The map shows nothing from your file | Register the `pmtiles` protocol before the map loads. Then check the layer's `source-layer` matches the layer name tippecanoe wrote (`pmtiles show yourfile.pmtiles`). |
 
 ## 2. Know before you start
 
+- **How tiles work today.** Martin (the server that turns the database into map tiles) builds every tile on request from PostGIS (the database). That means a running server and database for every environment.
+- **What PMTiles changes.** [PMTiles](https://docs.protomaps.com/pmtiles/) is a single static file holding a whole set of map tiles. A browser reads it directly from ordinary file hosting. You build it with tippecanoe (a command-line tool that turns GeoJSON into tiles).
+- **The Custom weights are the hard part.** The Custom panel in Settings has sliders that reweight the score live. Moving one asks the database to recompute every score. Static tiles can't do that, unless the browser computes the score instead.
 - **Get the data as GeoJSON.** Join `data.road_segment` (geometry and attributes) with `data.ridescore_v1_scores` (scores and components) on `segment_id`, and export it: with `ogr2ogr` or SQL from your local database, or with GeoPandas from the published data package's Parquet files.
 - **MapLibre reads PMTiles with a small plugin.** Load the [pmtiles JavaScript library](https://github.com/protomaps/PMTiles/tree/main/js) and register its protocol, then point a source at `pmtiles://...`.
-- **Work on a copy of the map page.** Put your experiment in a new page (for example `frontend/pmtiles/index.html`) so the main map keeps working.
+- **Work on a copy of the map page**, such as `frontend/pmtiles/index.html`, so the main map keeps working while you experiment.
 - **Validate locally.** Serve the `.pmtiles` file from your own machine (`pmtiles serve`, or from `frontend/` with Vite).
 
 ## 3. The challenge
@@ -92,14 +93,14 @@ Choose one:
 ## 4. Done when
 
 ::: tip Guideposts, not requirements
-Nothing on this page is a hard rule, and the scope is yours to shape. Use this list to know when you have something worth showing, not as a test to pass. Take the topic somewhere unexpected, combine it with another, or stop at whatever you finish: an honest half-built idea with good notes is a great outcome. This is a collaborative event, not a competition. Ask us anything, help the team next to you, and bring something only you would think of.
+Use this list to tell when you have something worth showing, not as a test to pass. Change the scope, combine topics, or stop at whatever you finish: half-built with good notes is a great result, because this is a collaborative event, not a competition.
 :::
 
 **Proof of concept:**
 
 - [ ] Your page shows DC's streets from a `.pmtiles` file, colored by score, served locally.
 - [ ] A short comparison with the Martin map: file size, load behavior, visual differences, missing features.
-- [ ] The steps to rebuild the file are written down, so someone else can repeat them.
+- [ ] Someone else could rebuild the file from your notes.
 
 **Plan:**
 
@@ -108,16 +109,16 @@ Nothing on this page is a hard rule, and the scope is yours to shape. Use this l
 
 ## 5. Hand in
 
-Share whatever you got to, in whichever form fits:
+Share whatever you got to:
 
-- **Code:** a pull request against `develop`; a draft is fine.
-- **Anything that isn’t code:** a shared Google Drive folder, or a link to a document.
+- **Code:** a pull request against `develop` (a draft is fine).
+- **Anything else:** a shared Google Drive folder, or a link to a document.
 - **The [submission form](/tracks/website-ui/submitting-your-work)**, one per team.
 - **Optional:** a short video link, and two slides in the demo deck for the 4:15 demos.
 
 A plan is just as welcome as a proof of concept. Large `.pmtiles` files are better linked from a Drive folder than committed.
 
-Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor; unfinished work is welcome, and we can help you wrap it up afterwards.
+Nothing here is mandatory on the day. If you run short on time, share what you have and tell a mentor, because unfinished work with good notes still helps the next volunteer.
 
 ## Resources
 
